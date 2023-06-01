@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import {NodeCameraView} from 'react-native-nodemediaclient';
 import ActionButton from 'react-native-action-button';
+// import {WebView} from 'react-native-webview';
 // import Icon from 'react-native-vector-icons/Ionicons';
 
 class PushScreen extends React.Component {
@@ -21,6 +22,9 @@ class PushScreen extends React.Component {
     this.state = {flashenable: false};
   }
 
+  componentWillUnmount() {
+    this.vb.stop();
+  }
   render() {
     return (
       <View style={{flex: 1, backgroundColor: '#333'}}>
@@ -48,6 +52,39 @@ class PushScreen extends React.Component {
             console.log('onStatus=' + code + ' msg=' + msg);
           }}
         />
+        <View>
+          <View
+            style={{
+              // backgroundColor: 'gray',
+              padding: 5,
+              margin: 30,
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+            <View
+              style={{
+                backgroundColor: 'red',
+                width: 6,
+                height: 6,
+                marginRight: 5,
+                borderRadius: 50,
+              }}
+            />
+            <Text style={{color: 'red'}}>Live</Text>
+          </View>
+
+          {/* <WebView
+            source={{
+              uri: 'https://tools.theras.xyz/widget/dellwatson**',
+            }} // Replace with the actual widget URL
+            style={{
+              border: 1,
+              borderColor: 'red',
+              position: 'absolute',
+            }}
+          /> */}
+        </View>
         <ActionButton
           buttonColor="#1abc9c"
           offsetY={32}
@@ -62,7 +99,7 @@ class PushScreen extends React.Component {
               this.vb.switchCamera();
               this.state.flashenable = false;
             }}>
-            <Text>Reverse</Text>
+            <Text>R</Text>
           </ActionButton.Item>
           <ActionButton.Item
             buttonColor="#3498db"
@@ -71,7 +108,7 @@ class PushScreen extends React.Component {
               this.state.flashenable = !this.state.flashenable;
               this.vb.flashEnable(this.state.flashenable);
             }}>
-            <Text>Switch</Text>
+            <Text>S</Text>
           </ActionButton.Item>
           <ActionButton.Item
             buttonColor="#e6ce28"
@@ -79,7 +116,7 @@ class PushScreen extends React.Component {
             onPress={() => {
               this.vb.start();
             }}>
-            <Text>Publish</Text>
+            <Text>P</Text>
           </ActionButton.Item>
           <ActionButton.Item
             buttonColor="#e74c3c"
@@ -87,15 +124,11 @@ class PushScreen extends React.Component {
             onPress={() => {
               this.props.navigation.goBack();
             }}>
-            <Text>Close</Text>
+            <Text>X</Text>
           </ActionButton.Item>
         </ActionButton>
       </View>
     );
-  }
-
-  componentWillUnmount() {
-    this.vb.stop();
   }
 }
 

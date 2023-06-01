@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import PlayScreen from '../screens/PlayScreen';
 import PushScreen from '../screens/PushScreen';
 import HomeScreen from '../screens/HomeScreen';
+import MainScreen from '../screens/MainScreen';
 const Stack = createStackNavigator();
 
 export default function RootStack() {
@@ -11,7 +12,7 @@ export default function RootStack() {
       <Stack.Navigator initialRouteName="Home" headerMode="none">
         <Stack.Screen
           name="Home"
-          component={HomeScreen}
+          component={MainScreen}
           options={{title: 'iShow'}}
         />
         <Stack.Screen name="Play" component={PlayScreen} />

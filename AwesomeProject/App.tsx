@@ -1,23 +1,31 @@
 /* eslint-disable */
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
-  Text,
-  TextInput,
   View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+  Modal,
+  TextInput,
   Button,
-  StatusBar,
-  Platform,
-  PermissionsAndroid,
+  StyleSheet,
 } from 'react-native';
 import RootStack from './src/navigations/root';
 
-export default class App extends React.Component {
-  render() {
-    // return <RootStack />;
-    return (
-      <View>
-        <Text>Test</Text>
-      </View>
-    );
-  }
+// import {initializeApp} from '@react-native-firebase/app';
+// import firestore from '@react-native-firebase/firestore';
+
+export default function App() {
+  // useEffect(() => {
+  //   async function testLoad() {
+  //     const user = await firestore()
+  //       .collection('users')
+  //       .doc('HjJawmX4pOuEp8e2i0yQ')
+  //       .get();
+  //     console.log(user, 'RESULT');
+  //   }
+  //   testLoad();
+  // }, []);
+
+  return <RootStack />;
 }

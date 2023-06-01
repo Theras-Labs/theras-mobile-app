@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "508990939667",
+    "project_id": "theras-staging",
+    "storage_bucket": "theras-staging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508990939667:android:752bf1a03178291a7f15e6",
+        "android_client_info": {
+          "package_name": "com.awesomeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508990939667-9k2173sf9k0bshd4jeq3hqs7unjcv6pt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmTvgb83V8AEL6YHvlh7alhw3S8sAMUj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508990939667-9k2173sf9k0bshd4jeq3hqs7unjcv6pt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508990939667:android:537d0d4d9e308f967f15e6",
+        "android_client_info": {
+          "package_name": "com.awesomeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508990939667-9k2173sf9k0bshd4jeq3hqs7unjcv6pt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmTvgb83V8AEL6YHvlh7alhw3S8sAMUj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508990939667-9k2173sf9k0bshd4jeq3hqs7unjcv6pt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
